@@ -13,6 +13,7 @@ __str__(self) -> str
 introduce(self) -> void
 punch(Person) -> void
 ```
+```
 class Person:
     """
     Attrs:
@@ -60,7 +61,7 @@ class Person:
     
     def eat(self):
         self.health_points = 100
-        
+```  
 ### 2
 - Create two `Person` objects.
 
