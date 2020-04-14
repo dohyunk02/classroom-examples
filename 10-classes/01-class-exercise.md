@@ -13,8 +13,6 @@ __str__(self) -> str
 introduce(self) -> void
 punch(Person) -> void
 ```
-
-```python
 class Person:
     """
     Attrs:
@@ -23,10 +21,46 @@ class Person:
         strength (int): How strong the person is 
         health_points (int): Out of 100 (everyone starts at 100)
     """
-    def __init__(self, ...):
-        pass
-```
-
+    def __init__(self, name: str, height: int, strength: int, health_points: int):
+        self.height = height
+        self.name = name
+        self.strength = strength
+        self.health_points = 100
+    
+    person1 = Person("Thomas Kim", "200", "200")
+    print(person1.name)
+    print(person1.height)
+    print(person1.strength)
+    print(person1.health_points)
+    
+    person2 = Person("Edmund Lee", "150", "300")
+    print(person2.name)
+    print(person2.height)
+    print(person2.strength)
+    print(person2.health_points)
+    
+    def __str__(self):
+        print(person1.name)
+        print(person1.health_points)
+        
+        print(person2.name)
+        print(person2.health_points)
+        
+    def introduce(self):
+        print(f"Hello, my name is {self.name}.")
+        
+    person1.introduce()
+    person2.introduce()
+    
+    def punch(self, person):
+        person.health_points -= 10
+    
+    person1.punch(person2)
+    person2.punch(person2)
+    
+    def eat(self):
+        self.health_points = 100
+        
 ### 2
 - Create two `Person` objects.
 
